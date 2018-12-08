@@ -72,10 +72,8 @@
                 data: data,
                 success: function (info) {
                    
-                    if(info.success) {
-                        location.href = '/user/login.html';
-                        return;
-                    }
+                    if(info.success) return location.href = '/user/login.html';                       
+                    
                     // 错误提示
                     alert(info.message);
                 }
